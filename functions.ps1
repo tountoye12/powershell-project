@@ -22,3 +22,16 @@ function Display-Message-3() {
 }
 
 
+function Display-Message() {
+
+    # Parameter help description
+    param(
+    [Parameter(Mandatory = $true)]
+    [string] $val
+    )
+    Write-Output $val | Write-Host
+}
+
+
+$nums = 1..3 | ForEach-Object { Write-Host $_ * 2}
+
